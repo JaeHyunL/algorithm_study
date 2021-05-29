@@ -34,7 +34,7 @@ queue.popleft()  #1
 queue.popleft()  #2
 queue.popleft()  #3
 
-''''
+'''
 
 #예제1) 유효한 괄호 문제
 def solution(s):
@@ -49,9 +49,13 @@ def solution(s):
             stack.append(char)
         elif table[char]!=stack.pop():
             return False
+        print(stack)
     return len(stack)==0
 
 
+
+#(){} )()
+'''
 #예제2) 프린터
 from collections import deque
 
@@ -71,4 +75,10 @@ def solution(priorities, location):
                 break
 
     return answer
+    '''
+
+
+if __name__ =="__main__":
+    s="((())"
+    print(solution(s))
     
